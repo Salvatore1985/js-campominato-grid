@@ -31,23 +31,32 @@
                         </li>
                     </ul>
                     <form class="d-flex align-items-center">
-                        <!--  <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"> -->
                         <label class="me-2" for="">Difficoltà :</label>
-                        <select name="" class="px-3" id="">
-                            <option value="livel-easy">Facile</option>
-                            <option value="livel-medium">Medio</option>
-                            <option value="livel-hard">Medio</option>
+                        <select name="" class="px-3" id="level">
+                            <option value="level-easy">Facile</option>
+                            <option value="level-medium">Medio</option>
+                            <option value="level-hard">Difficile</option>
                         </select>
-                        <button class=" btn-primary mx-2 px-3 rounded-3" type="">PLay</button>
+                        <button class=" btn-primary mx-2 px-3 rounded-3" type="" id="btn-level">PLay</button>
                     </form>
                 </div>
             </div>
         </nav>
     </header>
     <!-- main -->
-    <main></main>
+    <main>
+        <div class="container-fluid">
+            <div class="row mt-5">
+                <div class="offset-3 col-6 ">
+                    <div class="d-flex flex-wrap" id="grid">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
     <!-- footer -->
     <footer></footer>
+    <script src="js/script.js"></script>
 </body>
 
 </html>
