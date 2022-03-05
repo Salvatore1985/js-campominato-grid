@@ -1,12 +1,10 @@
 div#grid{
 height: 400px;
 width: 400px;
-border: 2px solid red;
+
 }
 
-.col-6{
-    border: 2px solid blue;
-}
+
 
 div.square{
     width: calc(100% / 10) ;
