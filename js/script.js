@@ -12,12 +12,12 @@ const levelElement = document.getElementById("level");
 const btnLevelElement = document.getElementById("btn-level");
 const gridElement = document.getElementById("grid");
 
+
 //*LEGO UN EVENTO AL CLICK DEL BTN-LEVEL
 /*Creo variabile per prendere il valore della section del livello*/
 /* btnLevelElement.addEventListener("click", function () {
     let levelValue = levelElement.value;
     console.log(levelValue);
-
 }); */
 
 
@@ -25,19 +25,41 @@ const gridElement = document.getElementById("grid");
 const createGridSquare = () => {
     const currentElement = document.createElement('div');
     // inseriamo tutto il necessario per ogni square
-    currentElement.classList.add("square", "easy");
+    currentElement.classList.add("square");
     return currentElement;
 };
 
 
-for (let i = 0; i < 100; i++) {
+// Arrow function che restituisceil varole della select di un elemento del DOM
+const selectValue = (element) => {
+    const elementValue = element.value;
+    // inseriamo tutto il necessario per ogni square
+    return elementValue;
+};
+
+
+
+selectValue(levelElement);
+console.log(selectValue(levelElement));
+
+let level = 100;
+for (let i = 0; i < level; i++) {
     const currentSquare = createGridSquare();
+    if (selectValue(levelElement) === "level-medium") {
+        level = 81;
+        currentSquare.classList.add('medium');
 
+    } else if (selectValue(levelElement) === "level-hard") {
+        level = 49;
+        currentSquare.classList.add('hard');
 
+    }
     currentSquare.addEventListener("click", function () {
-        this.classList.add('active');
+        currentSquare.classList.add('active');
+
     });
 
     gridElement.appendChild(currentSquare);
 
 }
+

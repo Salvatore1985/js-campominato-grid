@@ -8,21 +8,21 @@ border: 2px solid red;
     border: 2px solid blue;
 }
 
-div.square.easy{
+div.square{
     width: calc(100% / 10) ;
     height: calc(100% / 10) ;
     border: 1px solid black;
 }
 div.square.active{
- background-color: bisque;
+ background-color: lightskyblue;
 }
 div.square.medium{
-    width: calc(100% / 10) ;
-    height: calc(100% / 10) ;
+    width: calc(100% /9) ;
+    height: calc(100% /9) ;
     border: 1px solid black;
 }
 div.square.hard{
-    width: calc(100% / 10) ;
-    height: calc(100% / 10) ;
+    width: calc(100% /7) ;
+    height: calc(100% /7) ;
     border: 1px solid black;
 }
