@@ -10,13 +10,34 @@ Quando l'utente clicca su ogni cella, la cella cliccata si colora di azzurro.
 //*RECUPERO L'ELEMENTO DAL DOM
 const levelElement = document.getElementById("level");
 const btnLevelElement = document.getElementById("btn-level");
-
+const gridElement = document.getElementById("grid");
 
 //*LEGO UN EVENTO AL CLICK DEL BTN-LEVEL
-btnLevelElement.addEventListener("click", function () {
-    /*Creo variabile per prendere il valore della section del livello*/
+/*Creo variabile per prendere il valore della section del livello*/
+/* btnLevelElement.addEventListener("click", function () {
     let levelValue = levelElement.value;
     console.log(levelValue);
 
-});
+}); */
 
+
+// Arrow function che restituisce un div di square sotto forma di elemento del DOM
+const createGridSquare = () => {
+    const currentElement = document.createElement('div');
+    // inseriamo tutto il necessario per ogni square
+    currentElement.classList.add("square", "easy");
+    return currentElement;
+};
+
+
+for (let i = 0; i < 100; i++) {
+    const currentSquare = createGridSquare();
+
+
+    currentSquare.addEventListener("click", function () {
+        this.classList.add('active');
+    });
+
+    gridElement.appendChild(currentSquare);
+
+}

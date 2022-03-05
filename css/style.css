@@ -4,9 +4,24 @@ width: 400px;
 border: 2px solid red;
 }
 
+.col-6{
+    border: 2px solid blue;
+}
 
-
-div.square{
+div.square.easy{
+    width: calc(100% / 10) ;
+    height: calc(100% / 10) ;
+    border: 1px solid black;
+}
+div.square.active{
+ background-color: bisque;
+}
+div.square.medium{
+    width: calc(100% / 10) ;
+    height: calc(100% / 10) ;
+    border: 1px solid black;
+}
+div.square.hard{
     width: calc(100% / 10) ;
     height: calc(100% / 10) ;
     border: 1px solid black;
